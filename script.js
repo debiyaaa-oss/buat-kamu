@@ -74,17 +74,17 @@ function katanimasi(){
 function animateteksnim() {
 	//const teksnim = document.getElementById('teksnim');
     //const emojiAkhir = ['❤️'];
-    let percent = 10;
+    let percent = 100;
     setTimeout(function() {
         const intervalId = setInterval(() => {
-            if (percent < 9999) {
-                percent += Math.floor(Math.random() * (100 - 10 + 1)) + 10;
+            if (percent < 10000) {
+                percent += Math.floor(Math.random() * (1000 - 100 + 10)) + 100;
                 const randomEmoji = emojiAkhir[Math.floor(Math.random() * emojiAkhir.length)];
 
 			    teksLove.innerHTML = `<b>${teksLoveBawaan} ${percent}% ${randomEmoji}</b>`;
             } else {
                 clearInterval(intervalId);
-                percent = 9999;
+                percent = 10000;
                 const randomEmoji = emojiAkhir[Math.floor(Math.random() * emojiAkhir.length)];
                 teksLove.innerHTML = `<b>${teksLoveBawaan} <span style='color:yellow'>${percent}%</span> ${randomEmoji}</b>`;
                 teksLove.style="font-size:20px;transition:all .8s ease";
