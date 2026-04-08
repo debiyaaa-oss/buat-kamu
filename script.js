@@ -74,7 +74,7 @@ function katanimasi(){
 function animateteksnim() {
 	//const teksnim = document.getElementById('teksnim');
     //const emojiAkhir = ['❤️'];
-    let percent = 100;
+    let percent = 10;
     setTimeout(function() {
         const intervalId = setInterval(() => {
             if (percent < 10000) {
@@ -175,7 +175,7 @@ function katanimasi3() {
         afterComplete: function() {
             teksLoveBawaan = teksLove.innerHTML;
             const randomEmot = emojiAcak[Math.floor(Math.random() * emojiAcak.length)];
-            teksLove.innerHTML += ' 1% ' + randomEmot;
+            teksLove.innerHTML += ' 10% ' + randomEmot;
             teks4.innerHTML += `<br><br>` + teksTambahan.innerHTML;
             teksTambahan.innerHTML = "";
             setTimeout(animateteksnim, 100);
