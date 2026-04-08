@@ -78,7 +78,8 @@ function animateteksnim() {
     setTimeout(function() {
         const intervalId = setInterval(() => {
             if (percent < 10000) {
-                percent += Math.floor(Math.random() * (1000 - 100 + 10)) + 100;
+                percent += Math.floor(Math.random() * 901) + 100;
+				if (percent >= 10000) percent = 10000;
                 const randomEmoji = emojiAkhir[Math.floor(Math.random() * emojiAkhir.length)];
 
 			    teksLove.innerHTML = `<b>${teksLoveBawaan} ${percent}% ${randomEmoji}</b>`;
@@ -162,7 +163,7 @@ function katanimasi3() {
 
     // Menghasilkan array string dengan emotikon acak, tanpa pengulangan
     const stringsArray = Array.from({ length: 10 }, (_, i) => {
-        return `I Love You ${i + 1}% ${shuffledEmojis[i]}`; // Mengambil emotikon dari array yang sudah diacak
+        return `I Love You ${(i + 1) * 10}% ${shuffledEmojis[i]}`; // Mengambil emotikon dari array yang sudah diacak
     });
 
     new TypeIt("#teks4", {
