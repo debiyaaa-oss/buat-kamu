@@ -82,12 +82,12 @@ function animateteksnim() {
 				if (percent >= 10000) percent = 10000;
                 const randomEmoji = emojiAkhir[Math.floor(Math.random() * emojiAkhir.length)];
 
-			    teksLove.innerHTML = `<b>${teksLoveBawaan} ${percent}% ${randomEmoji}</b>`;
+			    teksLove.innerHTML = `<b>${teksLoveBawaan} ${percent}%</b><br>${randomEmoji}`;
             } else {
                 clearInterval(intervalId);
                 percent = 10000;
                 const randomEmoji = emojiAkhir[Math.floor(Math.random() * emojiAkhir.length)];
-                teksLove.innerHTML = `<b>${teksLoveBawaan} <span style='color:yellow'>${percent}%</span> ${randomEmoji}</b>`;
+                teksLove.innerHTML = `<b>${teksLoveBawaan} <span style='color:yellow'>${percent}%</span></b><br>${randomEmoji}`;
                 teksLove.style="font-size:20px;transition:all .8s ease";
 
                 setInterval(falling, 200);
