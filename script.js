@@ -175,7 +175,7 @@ function katanimasi3() {
         afterComplete: function() {
             teksLoveBawaan = teksLove.innerHTML;
             const randomEmot = emojiAcak[Math.floor(Math.random() * emojiAcak.length)];
-            teksLove.innerHTML += ' 10% ' + randomEmot;
+            teksLove.innerHTML = teksLove.innerHTML;
             teks4.innerHTML += `<br><br>` + teksTambahan.innerHTML;
             teksTambahan.innerHTML = "";
             setTimeout(animateteksnim, 100);
